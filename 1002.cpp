@@ -4,19 +4,20 @@
 #include "1002.h"
 int main1002()
 {
-	long long int n = 1234567890987654321;//这个可以
-	//long long int n = 1234567890987654321123456789;//这个就不能存储了
+	//string str = "1234567890987654321";//这个可以
+	string str = "1234567890987654321123456789";//这个就不能存储了
 	long sum = 0;
 	long temp = 0;
 	long count = 0;
 	stack<int> storeDig;
-	while(n != 0)
+	int size = str.size();
+	int i = 0;
+	for(;i<size;++i)
 	{
-		temp = n%10;
-		n = n/10;
+		temp = str[i] - 48;
 		sum+=temp;
 	}
-	cout<<sum<<endl;
+	//cout<<sum<<endl;
 	temp = 0;
 
 	while(sum!= 0)
@@ -35,7 +36,7 @@ int main1002()
 	}
 	return 0;
 }
-void digitalToPinyin(long long n)
+void digitalToPinyin(int n)
 {
 	switch (n)
 	{

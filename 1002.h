@@ -2,7 +2,7 @@
 #include <string>
 #include <stack>
 using namespace std;
-void digitalToPinyin(long long n);
+void digitalToPinyin(int n);
 /*
 class Int
 {
